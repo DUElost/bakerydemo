@@ -1,7 +1,8 @@
 @font-face {
-  font-family: Marcellus;
+  font-family: 'Source Han Serif CN';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('../fonts/Marcellus-Regular.woff2') format('woff2');
+  src: url('../fonts/SourceHanSerifCN/SourceHanSerifCN-Regular-1.otf');
+  /* src: url('../fonts/Marcellus-Regular.woff2') format('woff2'); */
 }
