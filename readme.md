@@ -134,14 +134,14 @@ You can run the Wagtail demo locally without setting up Vagrant or Docker and si
 With [PIP](https://github.com/pypa/pip) and [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/)
 installed, run:
 
-    mkvirtualenv wagtailbakerydemo
+    mkvirtualenv Mood Dailydemo
     python --version
 
 Confirm that this is showing a compatible version of Python 3.x. If not, and you have multiple versions of Python installed on your system, you may need to specify the appropriate version when creating the virtualenv:
 
     deactivate
-    rmvirtualenv wagtailbakerydemo
-    mkvirtualenv wagtailbakerydemo --python=python3.9
+    rmvirtualenv Mood Dailydemo
+    mkvirtualenv Mood Dailydemo --python=python3.9
     python --version
 
 Now we're ready to set up the bakery demo project itself:

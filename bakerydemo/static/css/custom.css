@@ -1,0 +1,26 @@
+.login {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto 20px;
+}
+
+.login h1 {
+text-align: center;
+margin-bottom: 30px; 
+}
+
+.login .secondaryAction {
+float: right; 
+line-height: 34px;
+}
+
+.signup {
+max-width: 400px;
+padding: 15px;
+margin: 0 auto 20px; 
+}
+
+.signup h1 {
+text-align: center;
+margin-bottom: 30px;
+}

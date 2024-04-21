@@ -14,7 +14,7 @@
       "go_live_at": null,
       "expire_at": null,
       "expired": false,
-      "body": "<p>Copyright <b>The Wagtail Bakery</b>, 2019. All rights reserved.<br/><i>\"If you read a lot you're well read / If you eat a lot you're well bread.\"</i></p>"
+      "body": "<p>Copyright <b>The Mood Daily</b>, 2019. All rights reserved.<br/><i>\"If you read a lot you're well read / If you eat a lot you're well bread.\"</i></p>"
     }
   },
   {
@@ -1431,7 +1431,7 @@
     "model": "wagtailcore.locale",
     "pk": 1,
     "fields": {
-      "language_code": "en"
+      "language_code": "zh-hans"
     }
   },
   {
@@ -1440,7 +1440,7 @@
     "fields": {
       "hostname": "127.0.0.1",
       "port": 8000,
-      "site_name": "Wagtail Bakery",
+      "site_name": "Mood Daily",
       "root_page": 60,
       "is_default_site": true
     }
@@ -1840,7 +1840,7 @@
     "pk": 2,
     "fields": {
       "content_type": ["base", "homepage"],
-      "label": "Welcome to the Wagtail Bakery!",
+      "label": "Welcome to the Mood Daily!",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2023-09-01T16:55:11.360Z",
@@ -1857,7 +1857,7 @@
     "pk": 3,
     "fields": {
       "content_type": ["base", "homepage"],
-      "label": "Welcome to the Wagtail Bakery!",
+      "label": "Welcome to the Mood Daily!",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2023-09-01T16:55:11.390Z",
@@ -1874,7 +1874,7 @@
     "pk": 4,
     "fields": {
       "content_type": ["base", "homepage"],
-      "label": "Welcome to the Wagtail Bakery!",
+      "label": "Welcome to the Mood Daily!",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2023-09-01T16:55:11.446Z",
@@ -3574,7 +3574,7 @@
     "pk": 104,
     "fields": {
       "content_type": ["base", "homepage"],
-      "label": "Welcome to the Wagtail Bakery!",
+      "label": "Welcome to the Mood Daily!",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2023-09-01T17:01:46.870Z",
@@ -3591,7 +3591,7 @@
     "pk": 105,
     "fields": {
       "content_type": ["base", "homepage"],
-      "label": "Welcome to the Wagtail Bakery!",
+      "label": "Welcome to the Mood Daily!",
       "action": "wagtail.comments.create",
       "data": {
         "comment": {
@@ -3614,7 +3614,7 @@
     "pk": 106,
     "fields": {
       "content_type": ["base", "homepage"],
-      "label": "Welcome to the Wagtail Bakery!",
+      "label": "Welcome to the Mood Daily!",
       "action": "wagtail.comments.create",
       "data": {
         "comment": {
@@ -3637,7 +3637,7 @@
     "pk": 107,
     "fields": {
       "content_type": ["base", "homepage"],
-      "label": "Welcome to the Wagtail Bakery!",
+      "label": "Welcome to the Mood Daily!",
       "action": "wagtail.workflow.start",
       "data": {
         "workflow": {
@@ -4034,7 +4034,7 @@
       "submitted_for_moderation": false,
       "created_at": "2023-09-01T16:55:10.791Z",
       "user": ["arabic"],
-      "object_str": "Welcome to the Wagtail Bakery!",
+      "object_str": "Welcome to the Mood Daily!",
       "content": {
         "pk": 60,
         "path": "00010002",
@@ -4054,8 +4054,8 @@
         "locked": false,
         "locked_at": null,
         "locked_by": null,
-        "title": "Welcome to the Wagtail Bakery!",
-        "draft_title": "Welcome to the Wagtail Bakery!",
+        "title": "Welcome to the Mood Daily!",
+        "draft_title": "Welcome to the Mood Daily!",
         "slug": "home",
         "content_type": 32,
         "url_path": "/home/",
@@ -4067,7 +4067,7 @@
         "alias_of": null,
         "image": 9,
         "hero_text": "A sample site designed to demonstrate the capabilities of the Wagtail Content Management System.",
-        "hero_cta": "Learn more about Wagtail",
+        "hero_cta": "关于我们",
         "hero_cta_link": 76,
         "body": "[{\"type\": \"paragraph_block\", \"value\": \"<p><b>Bread</b>\\u00a0is a\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Staple_food\\\">staple food</a>\\u00a0prepared from a\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Dough\\\">dough</a>\\u00a0of\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Flour\\\">flour</a>\\u00a0and\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Water\\\">water</a>, usually by\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Baking\\\">baking</a>. Throughout recorded history it has been popular around the world and is one of the oldest artificial foods, having been of importance since the dawn of\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Agriculture#History\\\">agriculture</a>.</p><p>Proportions of types of flour and other ingredients vary widely, as do modes of preparation. As a result, types, shapes, sizes, and textures of breads differ around the world. Bread may be\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Leaven\\\">leavened</a>\\u00a0by processes such as reliance on naturally occurring\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Sourdough\\\">sourdough</a>\\u00a0microbes, chemicals, industrially produced yeast, or high-pressure aeration. Some bread is cooked before it can leaven, including for traditional or religious reasons. Non-cereal ingredients such as fruits, nuts and fats may be included. Commercial bread commonly contains additives to improve flavor, texture, color, shelf life, and ease of manufacturing.</p>\", \"id\": \"331ba9a8-8580-4bfb-b47f-73bb4ec40ec0\"}]",
         "promo_image": 37,
@@ -4094,7 +4094,7 @@
       "submitted_for_moderation": false,
       "created_at": "2023-09-01T16:55:11.377Z",
       "user": ["arabic"],
-      "object_str": "Welcome to the Wagtail Bakery!",
+      "object_str": "Welcome to the Mood Daily!",
       "content": {
         "pk": 60,
         "path": "00010002",
@@ -4114,8 +4114,8 @@
         "locked": false,
         "locked_at": null,
         "locked_by": null,
-        "title": "Welcome to the Wagtail Bakery!",
-        "draft_title": "Welcome to the Wagtail Bakery!",
+        "title": "Welcome to the Mood Daily!",
+        "draft_title": "Welcome to the Mood Daily!",
         "slug": "home",
         "content_type": 32,
         "url_path": "/home/",
@@ -4127,7 +4127,7 @@
         "alias_of": null,
         "image": 9,
         "hero_text": "A sample site designed to demonstrate the capabilities of the Wagtail Content Management System.",
-        "hero_cta": "Learn more about Wagtail",
+        "hero_cta": "关于我们",
         "hero_cta_link": 76,
         "body": "[{\"type\": \"paragraph_block\", \"value\": \"<p><b>Bread</b>\\u00a0is a\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Staple_food\\\">staple food</a>\\u00a0prepared from a\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Dough\\\">dough</a>\\u00a0of\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Flour\\\">flour</a>\\u00a0and\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Water\\\">water</a>, usually by\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Baking\\\">baking</a>. Throughout recorded history it has been popular around the world and is one of the oldest artificial foods, having been of importance since the dawn of\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Agriculture#History\\\">agriculture</a>.</p><p>Proportions of types of flour and other ingredients vary widely, as do modes of preparation. As a result, types, shapes, sizes, and textures of breads differ around the world. Bread may be\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Leaven\\\">leavened</a>\\u00a0by processes such as reliance on naturally occurring\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Sourdough\\\">sourdough</a>\\u00a0microbes, chemicals, industrially produced yeast, or high-pressure aeration. Some bread is cooked before it can leaven, including for traditional or religious reasons. Non-cereal ingredients such as fruits, nuts and fats may be included. Commercial bread commonly contains additives to improve flavor, texture, color, shelf life, and ease of manufacturing.</p>\", \"id\": \"331ba9a8-8580-4bfb-b47f-73bb4ec40ec0\"}]",
         "promo_image": 37,
@@ -8748,7 +8748,7 @@
         "go_live_at": null,
         "expire_at": null,
         "expired": false,
-        "body": "<p>Copyright <b>The Wagtail Bakery</b>, 2019. All rights reserved.<br/><i>\"If you read a lot you're well read / If you eat a lot you're well bread.\"</i></p>"
+        "body": "<p>Copyright <b>The Mood Daily</b>, 2019. All rights reserved.<br/><i>\"If you read a lot you're well read / If you eat a lot you're well bread.\"</i></p>"
       },
       "approved_go_live_at": null
     }
@@ -8777,7 +8777,7 @@
         "go_live_at": null,
         "expire_at": null,
         "expired": false,
-        "body": "<p>Copyright <b>The Wagtail Bakery</b>, 2019. All rights reserved.<br/><i>\"If you read a lot you're well read / If you eat a lot you're well bread.\"</i></p>"
+        "body": "<p>Copyright <b>The Mood Daily</b>, 2019. All rights reserved.<br/><i>\"If you read a lot you're well read / If you eat a lot you're well bread.\"</i></p>"
       },
       "approved_go_live_at": null
     }
@@ -9668,7 +9668,7 @@
       "submitted_for_moderation": false,
       "created_at": "2023-09-01T17:01:46.837Z",
       "user": ["editor"],
-      "object_str": "Welcome to the Wagtail Bakery!",
+      "object_str": "Welcome to the Mood Daily!",
       "content": {
         "pk": 60,
         "path": "00010002",
@@ -9688,8 +9688,8 @@
         "locked": false,
         "locked_at": null,
         "locked_by": null,
-        "title": "Welcome to the Wagtail Bakery!",
-        "draft_title": "Welcome to the Wagtail Bakery!",
+        "title": "Welcome to the Mood Daily!",
+        "draft_title": "Welcome to the Mood Daily!",
         "slug": "home",
         "content_type": 32,
         "url_path": "/home/",
@@ -9701,7 +9701,7 @@
         "alias_of": null,
         "image": 9,
         "hero_text": "A sample site designed to demonstrate the capabilities of the Wagtail Content Management System.",
-        "hero_cta": "Learn more about Wagtail",
+        "hero_cta": "关于我们",
         "hero_cta_link": 76,
         "body": "[{\"type\": \"paragraph_block\", \"value\": \"<p data-block-key=\\\"ox2z4\\\"><b>Bread</b>\\u00a0is a\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Staple_food\\\">staple food</a>\\u00a0prepared from a\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Dough\\\">dough</a>\\u00a0of\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Flour\\\">flour</a>\\u00a0and\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Water\\\">water</a>, usually by\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Baking\\\">baking</a>. Throughout recorded history it has been popular around the world and is one of the oldest artificial foods, having been of importance since the dawn of\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Agriculture#History\\\">agriculture</a>.</p><p data-block-key=\\\"3a611\\\">Proportions of types of flour and other ingredients vary widely, as do modes of preparation. As a result, types, shapes, sizes, and textures of breads differ around the world. Bread may be\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Leaven\\\">leavened</a>\\u00a0by processes such as reliance on naturally occurring\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Sourdough\\\">sourdough</a>\\u00a0microbes, chemicals, industrially produced yeast, or high-pressure aeration. Some breads are baked before they have a chance to rise, often for traditional or religious reasons. Inclusions like fruits, nuts, and fats are sometimes added. Commercial bread typically includes additives to enhance flavor, texture, color, longevity, and production efficiency.</p>\", \"id\": \"712d96a8-1392-41fe-8dae-c790e041e094\"}]",
         "promo_image": 37,
@@ -10455,8 +10455,8 @@
       "locked": false,
       "locked_at": null,
       "locked_by": null,
-      "title": "Welcome to the Wagtail Bakery!",
-      "draft_title": "Welcome to the Wagtail Bakery!",
+      "title": "Welcome to the Mood Daily!",
+      "draft_title": "Welcome to the Mood Daily!",
       "slug": "home",
       "content_type": ["base", "homepage"],
       "url_path": "/home/",
@@ -13334,7 +13334,7 @@
     "pk": 1,
     "fields": {
       "site": ["127.0.0.1", 8000],
-      "title_suffix": "The Wagtail Bakery"
+      "title_suffix": "The Mood Daily"
     }
   },
   {
@@ -13365,7 +13365,7 @@
     "fields": {
       "image": 9,
       "hero_text": "A sample site designed to demonstrate the capabilities of the Wagtail Content Management System.",
-      "hero_cta": "Learn more about Wagtail",
+      "hero_cta": "关于我们",
       "hero_cta_link": 76,
       "body": "[{\"type\": \"paragraph_block\", \"value\": \"<p><b>Bread</b>\\u00a0is a\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Staple_food\\\">staple food</a>\\u00a0prepared from a\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Dough\\\">dough</a>\\u00a0of\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Flour\\\">flour</a>\\u00a0and\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Water\\\">water</a>, usually by\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Baking\\\">baking</a>. Throughout recorded history it has been popular around the world and is one of the oldest artificial foods, having been of importance since the dawn of\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Agriculture#History\\\">agriculture</a>.</p><p>Proportions of types of flour and other ingredients vary widely, as do modes of preparation. As a result, types, shapes, sizes, and textures of breads differ around the world. Bread may be\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Leaven\\\">leavened</a>\\u00a0by processes such as reliance on naturally occurring\\u00a0<a href=\\\"https://en.wikipedia.org/wiki/Sourdough\\\">sourdough</a>\\u00a0microbes, chemicals, industrially produced yeast, or high-pressure aeration. Some bread is cooked before it can leaven, including for traditional or religious reasons. Non-cereal ingredients such as fruits, nuts and fats may be included. Commercial bread commonly contains additives to improve flavor, texture, color, shelf life, and ease of manufacturing.</p>\", \"id\": \"331ba9a8-8580-4bfb-b47f-73bb4ec40ec0\"}]",
       "promo_image": 37,

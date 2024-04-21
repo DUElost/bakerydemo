@@ -183,7 +183,7 @@ class FooterText(
 
 class StandardPage(Page):
     """
-    A generic content page. On this demo site we use it for an about page but
+    A generic content page. On this demo site we use it for an about page, but
     it could be used for any type of page content that only needs a title,
     image, introduction and body field
     """
@@ -478,8 +478,8 @@ class SiteSettings(BaseSiteSetting):
     title_suffix = models.CharField(
         verbose_name="Title suffix",
         max_length=255,
-        help_text="The suffix for the title meta tag e.g. ' | The Wagtail Bakery'",
-        default="The Wagtail Bakery",
+        help_text="The suffix for the title meta tag e.g. ' | The Mood Daily'",
+        default="The Mood Daily",
     )
 
     panels = [

@@ -53,8 +53,8 @@ class Migration(migrations.Migration):
                 (
                     "title_suffix",
                     models.CharField(
-                        default="The Wagtail Bakery",
-                        help_text="The suffix for the title meta tag e.g. ' | The Wagtail Bakery'",
+                        default="The Mood Daily",
+                        help_text="The suffix for the title meta tag e.g. ' | The Mood Daily'",
                         max_length=255,
                         verbose_name="Title suffix",
                     ),

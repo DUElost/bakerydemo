@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% load static i18n %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+    
+      <h1>{% trans "登录" %}</h1>
+      
+      <form class="login" method="POST" action="{% url 'account_login' %}">
+
+        {% csrf_token %}
+        
+        {{ form.as_p }}
+        
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}  
+        
+        <a class="btn btn-secondary btn-sm" href="{% url 'account_reset_password' %}">{% trans "忘记密码?" %}</a>
+      
+        <button class="btn btn-primary btn-lg" type="submit">{% trans "登录" %}</button>
+      
+      </form>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
