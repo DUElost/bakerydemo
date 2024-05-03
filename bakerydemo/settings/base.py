@@ -42,7 +42,8 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_EMAIL_CONFIRMATION_HMAC = False
 ACCOUNT_EMAIL_REQUIRED = False
 
-LOGIN_REDIRECT_URL = '/student_homepage'
+# 设置登录后需要跳转的界面
+LOGIN_REDIRECT_URL = '/'
 # LOGIN_REDIRECT_URL = "/"
 
 AUTHENTICATION_BACKENDS = [
@@ -229,9 +230,8 @@ WAGTAIL_SITE_NAME = "bakerydemo"
 
 WAGTAIL_I18N_ENABLED = True
 
+# ("en", "English"),
 WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [
-    ("en", "English"),
-    ("de", "Deutsch"),
     ("zh-hans", "Simplified Chinese"),
 ]
 

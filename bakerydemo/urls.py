@@ -33,6 +33,11 @@ urlpatterns = [
     path('accounts/password/reset/done/', auth_views.PasswordResetDoneView.as_view(), name='account_reset_password_done'),
 
     path('emotion_record/', views.emotion_record, name='emotion_record'),
+    path('student_homepage/', views.student_homepage, name='student_homepage'),
+    path('wellness/', views.wellness, name='wellness'),
+    path('wellness/mood_check/', views.mood_check, name='mood_check'),
+    path('mood_check_history/', views.mood_check_history, name='mood_check_history'),
+
     re_path(
         r"^images/([^/]*)/(\d*)/([^/]*)/[^/]*$",
         ServeView.as_view(),
@@ -58,6 +63,10 @@ if settings.DEBUG:
         path(
             "favicon.ico",
             RedirectView.as_view(url=settings.STATIC_URL + "img/bread-favicon.ico"),
+        ),
+        path(
+            "wellness.svg",
+            RedirectView.as_view(url=settings.STATIC_URL + "img/wellness.3fb9e660.svg")
         )
     ]
 

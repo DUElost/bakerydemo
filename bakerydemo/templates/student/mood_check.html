@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load static %}
+{% load wagtailimages_tags wagtailcore_tags %}
+
+
+{% block content %}
+    {% if request.user.is_authenticated %}
+        <head>
+            <title>Emotion Selector</title>
+            <style>
+                .container {
+                    background-color: white;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                    max-width: 1000px;
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .grid-container {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-gap: 20px;
+                    margin-bottom: 20px;
+                }
+
+                .grid-item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                }
+
+                .grid-item:hover {
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                    transform: scale(1.05);
+                }
+
+                .grid-item img {
+                    max-width: 100%;
+                    height: auto;
+                    max-height: 100px; /* 设置图片的最大高度为 100px */
+                    object-fit: contain;
+                }
+
+                .grid-item p {
+                    margin-top: 10px;
+                    font-weight: bold;
+                }
+
+                {#.send-button {#}
+                {#    margin-top: 20px;#}
+                {#    padding: 10px 20px;#}
+                {#    background-color: #4CAF50;#}
+                {#    color: white;#}
+                {#    border: none;#}
+                {#    border-radius: 5px;#}
+                {#    cursor: pointer;#}
+                {#    transition: all 0.3s ease;#}
+
+
+                .send-button:hover {
+                    background-color: #3e8e41;
+                }
+
+                .grid-item.selected {
+                    border: 2px solid #4287f5;
+                }
+
+            </style>
+        </head>
+        <body>
+        <div class="container">
+            <p style="font-family: Open Sans, Arial, sans-serif">是什么让你有这种感觉?</p>
+            <div class="grid-container">
+                <div class="grid-item"><img src="{% static 'img/diet.png' %}" alt="Diet">
+                    <p>饮食</p></div>
+                <div class="grid-item"><img src="{% static 'img/exam.png' %}" alt="Exam">
+                    <p>考试</p></div>
+                <div class="grid-item"><img src="{% static 'img/family.png' %}" alt="Family">
+                    <p>家庭</p></div>
+                <div class="grid-item"><img src="{% static 'img/peer-relation.png' %}" alt="Peer Relation">
+                    <p>人际关系</p></div>
+                <div class="grid-item"><img src="{% static 'img/sleep.png' %}" alt="Sleep">
+                    <p>睡眠</p></div>
+                <div class="grid-item"><img src="{% static 'img/social-media.png' %}" alt="Social Media">
+                    <p>社交媒体</p></div>
+                <div class="grid-item"><img src="{% static 'img/sport.png' %}" alt="Sport">
+                    <p>运动</p></div>
+                <div class="grid-item"><img src="{% static 'img/study.png' %}" alt="Study">
+                    <p>学习</p></div>
+                <div class="grid-item"><img src="{% static 'img/other.png' %}" alt="Other">
+                    <p>其他</p></div>
+            </div>
+            <a href="/mood_check_record/" class="button btn btn-primary btn-lg" id="send-btn">Send</a>
+        </div>
+        <script>
+            const gridItems = document.querySelectorAll('.grid-item');
+
+            gridItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    item.classList.toggle('selected');
+                });
+            });
+        </script>
+        </body>
+    {% endif %}
+{% endblock %}

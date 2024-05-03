@@ -610,6 +610,13 @@ blockquote .attribute-name {
   padding: 20px 0 0;
 }
 
+/*.container {*/
+/*        display: flex;*/
+/*        justify-content: center;*/
+/*        align-items: center;*/
+/*        height: 100vh;*/
+/*}*/
+
 .navigation__desktop {
   display: none;
 }
