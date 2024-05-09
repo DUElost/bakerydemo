@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+  <h1>Mood Check Record</h1>
+  {% form_block form %}
+    {% for field in form %}
+      {% include "formfield.html" %}
+    {% endfor %}
+    <input type="submit" value="Submit">
+  {% endform_block %}
+{% endblock %}

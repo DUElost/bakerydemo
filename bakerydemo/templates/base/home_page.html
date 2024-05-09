@@ -4,76 +4,136 @@
 
 {% block content %}
     {% if request.user.is_authenticated %}
-        <head>
-            <title>Mood Tracker</title>
-            <style>
-                .container {
-                    background-color: white;
-                    padding: 20px;
-                    border-radius: 10px;
-                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                    max-width: 1000px;
-                    width: 100%;
-                }
-            </style>
-        </head>
+    <head>
+        <title>Mood Tracker</title>
+        <style>
+            .container {
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                max-width: 1000px;
+                width: 100%;
+            }
+        </style>
+    </head>
+    {% if not user.is_superuser %}
         <div class="container">
-            <span class="content_student">
-                <div class="tile_student jvweUh_student" style="background: none;box-shadow: none;border: none;display: grid;grid-template-columns: repeat(4, 1fr);row-gap: 16px;justify-items: center;margin-bottom: 24px;padding: 8px 0px;">
-                    <div class="navigation__items nav-pills" style="text-align: center;list-style-position: inside;">
-                        <li class="presentation">
-                            <a class="hRVWvh_student" href="/wellness">
-                                <img src="{% static "img/wellness.3fb9e660.svg" %}" alt="Wellness" width="53"
-                                     height="52">
-                                <div class="cBlAKR_student">每日心理</div>
-                            </a>
-                        </li>
+                <span class="content_student">
+                    <div class="tile_student jvweUh_student"
+                         style="background: none;box-shadow: none;border: none;display: grid;grid-template-columns: repeat(4, 1fr);row-gap: 16px;justify-items: center;margin-bottom: 24px;padding: 8px 0px;">
+                        <div class="navigation__items nav-pills"
+                             style="text-align: center;list-style-position: inside;">
+                            <li class="presentation">
+                                <a class="hRVWvh_student" href="/wellness">
+                                    <img src="{% static "img/wellness.3fb9e660.svg" %}" alt="Wellness" width="53"
+                                         height="52">
+                                    <div class="cBlAKR_student">每日心理</div>
+                                </a>
+                            </li>
+                        </div>
+                        <ul class="navigation__items nav-pills" style="text-align: center;list-style-position: inside;">
+                            <li class="presentation">
+                                <a class="hRVWvh_student" href="/mood_check_history/">
+                                    <img src="{% static "img/location.1602c877.svg" %}" alt="Mood_Check_History"
+                                         width="53"
+                                         height="52">
+                                    <div class="cBlAKR_student">历史记录</div>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="navigation__items nav-pills" style="text-align: center;list-style-position: inside;">
+                             <li class="presentation">
+                                <a class="hRVWvh_student" href="/myclass/">
+                                    <img src="{% static "img/pass.a220f0e2.svg" %}" alt="My_Class" width="53"
+                                         height="52">
+                                    <div class="cBlAKR_student">我的班级</div>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="navigation__items nav-pills" style="text-align: center;list-style-position: inside;">
+                             <li class="presentation">
+                                <a class="hRVWvh_student" href="/counseling/">
+                                    <img src="{% static "img/form.236887bc.svg" %}" alt="Counseling" width="53"
+                                         height="52">
+                                    <div class="cBlAKR_student">心理咨询</div>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="navigation__items nav-pills" style="text-align: center;list-style-position: inside;">
-                        <li class="presentation">
-                            <a class="hRVWvh_student" href="/mood_check_history/">
-                                <img src="{% static "img/location.1602c877.svg" %}" alt="Wellness" width="53"
-                                     height="52">
-                                <div class="cBlAKR_student">历史记录</div>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="navigation__items nav-pills" style="text-align: center;list-style-position: inside;">
-                         <li class="presentation">
-                            <a class="hRVWvh_student" href="/student/home/wellness">
-                                <img src="{% static "img/pass.a220f0e2.svg" %}" alt="Wellness" width="53"
-                                     height="52">
-                                <div class="cBlAKR_student">我的班级</div>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="navigation__items nav-pills" style="text-align: center;list-style-position: inside;">
-                         <li class="presentation">
-                            <a class="hRVWvh_student" href="/student/home/wellness">
-                                <img src="{% static "img/form.236887bc.svg" %}" alt="Wellness" width="53"
-                                     height="52">
-                                <div class="cBlAKR_student">表单填写</div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="container-fluid hero">
-                    {% image page.image fill-1920x600 class="hero-image" alt="" %}
-                    <div class="hero-gradient-mask"></div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-6 col-md-offset-1 col-lg-5 home-hero">
-                                <h1>{{ page.title }}</h1>
+                    <div class="container-fluid hero">
+                        {% image page.image fill-1920x600 class="hero-image" alt="" %}
+                        <div class="hero-gradient-mask"></div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-1 col-lg-5 home-hero">
+                                    <h1>{{ page.title }}</h1>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </span>
-        </div>
+                </span>
+            </div>
+        {% else %}
+             <div class="container">
+                <span class="content_student">
+                    <div class="tile_student jvweUh_student"
+                         style="background: none;box-shadow: none;border: none;display: grid;grid-template-columns: repeat(4, 1fr);row-gap: 16px;justify-items: center;margin-bottom: 24px;padding: 8px 0px;">
+                        <div class="navigation__items nav-pills"
+                             style="text-align: center;list-style-position: inside;">
+                            <li class="presentation">
+                                <a class="hRVWvh_student" href="/advice">
+                                    <img src="{% static "img/nurture.76f11381.svg" %}" alt="Wellness" width="53"
+                                         height="52">
+                                    <div class="cBlAKR_student">心理辅导</div>
+                                </a>
+                            </li>
+                        </div>
+                        <ul class="navigation__items nav-pills" style="text-align: center;list-style-position: inside;">
+                            <li class="presentation">
+                                <a class="hRVWvh_student" href="/mood_check_management/">
+                                    <img src="{% static "img/supervise.555232ce.svg" %}" alt="Mood_Check_History"
+                                         width="64"
+                                         height="64">
+                                    <div class="cBlAKR_student">辅导记录</div>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="navigation__items nav-pills" style="text-align: center;list-style-position: inside;">
+                             <li class="presentation">
+                                <a class="hRVWvh_student" href="/myclass_manager/">
+                                    <img src="{% static "img/unify.f566051d.svg" %}" alt="My_Class" width="64"
+                                         height="64">
+                                    <div class="cBlAKR_student">班级信息</div>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="navigation__items nav-pills" style="text-align: center;list-style-position: inside;">
+                             <li class="presentation">
+                                <a class="hRVWvh_student" href="/counseling_record/">
+                                    <img src="{% static "img/coordinate.9da69daa.svg" %}" alt="Counseling" width="64"
+                                         height="64">
+                                    <div class="cBlAKR_student">咨询记录</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="container-fluid hero">
+                        {% image page.image fill-1920x600 class="hero-image" alt="" %}
+                        <div class="hero-gradient-mask"></div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-1 col-lg-5 home-hero">
+                                    <h1>{{ page.title }}</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </span>
+            </div>
+        {% endif %}
     {% else %}
-    
         <div class="homepage">
-    
             <div class="container-fluid hero">
                 {% image page.image fill-1920x600 class="hero-image" alt="" %}
                 <div class="hero-gradient-mask"></div>
@@ -93,7 +153,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="container">
                 <div class="row promo-row">
                     <div class="featured-cards col-sm-5 col-sm-offset-1">
@@ -112,7 +172,7 @@
                             </a>
                         {% endif %}
                     </div>
-    
+
                     <div class="col-sm-6 promo">
                         {% if page.promo_image or page.promo_title or page.promo_text %}
                             <div class="col-lg-10 promo-text">
@@ -130,7 +190,7 @@
                     </div>
                 </div>
             </div>
-    
+
             {% if page.body %}
                 <div class="container-fluid streamfield">
                     <div class="row">
@@ -140,7 +200,7 @@
                     </div>
                 </div>
             {% endif %}
-    
+
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 locations-section">
@@ -153,7 +213,7 @@
                     </div>
                 </div>
             </div>
-    
+
             {% if page.featured_section_3 %}
                 <div class="blog-section__background">
                     <div class="container">

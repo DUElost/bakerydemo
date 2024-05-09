@@ -1309,6 +1309,22 @@
     }
   },
   {
+    "model": "wagtailforms.formsubmission",
+    "pk": 2,
+    "fields": {
+      "form_data": {
+        "purpose": "Feedback",
+        "subject": "Hello!",
+        "body": "Love and peace!",
+        "your_name": "Dai Lv",
+        "your_email": "dai.lv@tinno.com"
+      },
+      "page": 69,
+      "submit_time": "2024-05-04T16:56:48.939Z"
+    }
+  },
+
+  {
     "model": "wagtailsearchpromotions.query",
     "pk": 1,
     "fields": {

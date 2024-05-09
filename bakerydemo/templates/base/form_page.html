@@ -37,21 +37,22 @@
                     {% endif %}
 
                     {% for field in form %}
-                        <div class="form-page__field" aria-required={% if field.field.required %}"true"{% else %}"false"{% endif %}>
+                        <div class="form-page__field" aria-required={% if field.field.required %}"true"{% else %}"false"
+                        {% endif %}>
 
-                            {{ field.label_tag }}{% if field.field.required %}<span class="required">*</span>{% endif %}
+                        {{ field.label_tag }}{% if field.field.required %}<span class="required">*</span>{% endif %}
 
-                            {% if field.help_text %}
-                                <p class="help">{{ field.help_text }}</p>
-                            {% endif %}
+                        {% if field.help_text %}
+                            <p class="help">{{ field.help_text }}</p>
+                        {% endif %}
 
-                            {{ field }}
+                        {{ field }}
                         </div>
                     {% endfor %}
 
-                    <input type="submit">
-                </form>
-            </div>
+            <input type="submit">
+            </form>
         </div>
+    </div>
     </div>
 {% endblock content %}

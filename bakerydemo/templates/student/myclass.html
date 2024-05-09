@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% load static %}
+{% load wagtailimages_tags wagtailcore_tags %}
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- mood_check_history.html -->
+{% block content %}
+    <style>
+        .container_page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+        }
+
+        .container_page2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+        }
+
+        .listing {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 1400px;
+            font-family: Arial, sans-serif;
+        }
+
+        .listing th, .listing td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .listing th {
+            background-color: #f2f2f2;
+        }
+
+        .listing th a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .listing tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+    <div class="navigation__items nav-pills" style="margin-top: 5px;text-align: center;">
+        <span>
+            <div class="presentation ">
+                <h3>教师名单</h3>
+            </div>
+        </span>
+    </div>
+    <div class="container container_page">
+        <table class="listing">
+            <thead>
+            <tr>
+                <th id="username" class="" style="width:100px">
+                    用户名
+                </th>
+
+                <th id="last_name" class="" style="width:100px">
+                    姓名
+                </th>
+
+                <th id="email" class="" style="width:100px">
+                    电子邮件
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for user in users %}
+                {% if user.is_superuser %}
+                    <tr>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.last_name }}{{ user.first_name }}</td>
+                        <td>{{ user.email }}</td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="navigation__items nav-pills" style="margin-top: 5px;text-align: center;">
+        <span>
+            <div class="presentation ">
+                <h3>班级学生名单</h3>
+            </div>
+        </span>
+    </div>
+    <div class="container container_page2">
+        <table class="listing">
+            <thead>
+            <tr>
+                <th id="username" class="" style="width:100px">
+                    用户名
+                </th>
+
+                <th id="last_name" class="" style="width:100px">
+                    姓名
+                </th>
+
+                <th id="email" class="" style="width:100px">
+                    电子邮件
+                </th>
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for user in users %}
+                {% if not user.is_superuser %}
+                    
+                    <tr>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.last_name }}{{ user.first_name }}</td>
+                        <td>{{ user.email }}</td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+</body>
+

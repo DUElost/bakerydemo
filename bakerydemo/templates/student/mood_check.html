@@ -75,38 +75,70 @@
             </style>
         </head>
         <body>
-        <div class="container">
-            <p style="font-family: Open Sans, Arial, sans-serif">是什么让你有这种感觉?</p>
-            <div class="grid-container">
-                <div class="grid-item"><img src="{% static 'img/diet.png' %}" alt="Diet">
-                    <p>饮食</p></div>
-                <div class="grid-item"><img src="{% static 'img/exam.png' %}" alt="Exam">
-                    <p>考试</p></div>
-                <div class="grid-item"><img src="{% static 'img/family.png' %}" alt="Family">
-                    <p>家庭</p></div>
-                <div class="grid-item"><img src="{% static 'img/peer-relation.png' %}" alt="Peer Relation">
-                    <p>人际关系</p></div>
-                <div class="grid-item"><img src="{% static 'img/sleep.png' %}" alt="Sleep">
-                    <p>睡眠</p></div>
-                <div class="grid-item"><img src="{% static 'img/social-media.png' %}" alt="Social Media">
-                    <p>社交媒体</p></div>
-                <div class="grid-item"><img src="{% static 'img/sport.png' %}" alt="Sport">
-                    <p>运动</p></div>
-                <div class="grid-item"><img src="{% static 'img/study.png' %}" alt="Study">
-                    <p>学习</p></div>
-                <div class="grid-item"><img src="{% static 'img/other.png' %}" alt="Other">
-                    <p>其他</p></div>
+        <form method="POST" action="{% url 'mood_check' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="container">
+                <p style="font-family: Open Sans, Arial, sans-serif">是什么让你有这种感觉?</p>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="{% static 'img/diet.png' %}" alt="Diet">
+                        <p>饮食</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="{% static 'img/exam.png' %}" alt="Exam">
+                        <p>考试</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="{% static 'img/family.png' %}" alt="Family">
+                        <p>家庭</p>
+                    </div>
+                    <div class="grid-item"><img src="{% static 'img/peer-relation.png' %}" alt="Peer Relation">
+                        <p>人际关系</p>
+                    </div>
+                    <div class="grid-item"><img src="{% static 'img/sleep.png' %}" alt="Sleep">
+                        <p>睡眠</p>
+                    </div>
+                    <div class="grid-item"><img src="{% static 'img/social-media.png' %}" alt="Social Media">
+                        <p>社交媒体</p>
+                    </div>
+                    <div class="grid-item"><img src="{% static 'img/sport.png' %}" alt="Sport">
+                        <p>运动</p>
+                    </div>
+                    <div class="grid-item"><img src="{% static 'img/study.png' %}" alt="Study">
+                        <p>学习</p>
+                    </div>
+                    <div class="grid-item"><img src="{% static 'img/other.png' %}" alt="Other">
+                        <p>其他</p>
+                    </div>
+                </div>
+                <a href="/mood_check_record/" class="button btn btn-primary btn-lg" id="send-btn">提交</a>
+{#                <button type="submit" class="button btn btn-primary btn-lg" id="send-btn">提交</button>#}
             </div>
-            <a href="/mood_check_record/" class="button btn btn-primary btn-lg" id="send-btn">Send</a>
-        </div>
+        </form>
         <script>
             const gridItems = document.querySelectorAll('.grid-item');
+            const selectedItemsInput = document.getElementById('selected-items');
+            const sendBtn = document.getElementById('send-btn');
 
             gridItems.forEach(item => {
                 item.addEventListener('click', () => {
                     item.classList.toggle('selected');
+                    const itemText = item.querySelector('p').textContent;
+                    if (item.classList.contains('selected')) {
+                        selectedItemsInput.value += `${itemText},`; // 添加逗号分隔的值
+                    } else {
+                        const items = selectedItemsInput.value.split(',');
+                        selectedItemsInput.value = items.filter(selected => selected !== itemText).join(',');
+                    }
                 });
             });
+
+            {#sendBtn.addEventListener('click', (event) => {#}
+            {#    event.preventDefault(); // 阻止默认的表单提交行为，用JavaScript处理#}
+            {#    // 提交表单前的任何验证或操作#}
+            {#    document.querySelector('form').submit();#}
+
         </script>
         </body>
     {% endif %}
